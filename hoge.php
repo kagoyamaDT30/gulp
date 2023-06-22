@@ -4,7 +4,6 @@
 <h1>Hoge</h1>
 <div class="p-hoge">
     hoge
-    <img src="./dist/images/">
 </div>
 </main>
 
