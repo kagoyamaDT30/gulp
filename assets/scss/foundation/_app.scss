@@ -1,0 +1,39 @@
+@use "../setting/app" as *;
+
+html{
+    font-family: $mainfont;
+    // 1920pxで10px
+    font-size: calc(100vw / 192);
+}
+
+body{
+    font-size: 2.2rem;
+    font-family: $Noto;
+    width: auto;
+    // color: red;
+}
+
+button {
+    padding: .5rem;
+    @include color-btn;
+}
+
+input[type="submit"]{
+    @include color-btn;
+}
+
+select{
+    @include basic-input;
+}
+
+a {
+    display: inline-block;
+    border: $solid;
+    margin: 3rem 0;
+    padding: .5rem;
+    @include color-btn;
+}
+
+h1 {
+    font-size: 5rem;
+}

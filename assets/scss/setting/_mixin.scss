@@ -1,0 +1,34 @@
+@use "../setting/size" as s;
+@use "../setting/color" as c;
+
+// メディアクエリ
+$breakpoints: (
+    "sp": "screen and (max-width: 480px)",
+    "tb": "screen and (max-width: 1000px)",
+);
+
+// ブレークポイント
+@mixin mq($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+// コンテンツ幅
+@mixin content-width{
+    width: s.$pc1;
+    max-width: s.$max1;
+    margin: s.$center;
+}
+
+// ボタン色
+@mixin color-btn{
+    color: #fff;
+    background-color: #000;
+}
+
+// 入力フォーム背景色
+@mixin basic-input{
+    background-color: c.$back-gray;
+    border: s.$solid-gray;
+}

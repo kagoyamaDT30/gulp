@@ -1,0 +1,19 @@
+@use "./color" as *;
+
+// width
+$pc1: 1000px;
+
+$max1: 1000px;
+
+// border
+$solid: solid 1px #000;
+$solid-gray: solid 1px $back-gray;
+
+// margin
+$center: 0 auto;
+
+// sp画面のpadding
+$spframe: 20px;
+
+// transition速度
+$animation: all .5s;
