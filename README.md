@@ -6,14 +6,15 @@ gulpfileの編集
 
 ターミナル
 ```
-npm install
-または
 yarn install
 
 gulp
 ```
+- `gulp`
+ブラウザシンク&watchで起動させる
 
-gulpでコンパイル、ブラウザシンクかかるよ
+- `gulp prod`
+`dist`を生成する（圧縮形式のソース）
 
 ## プラグイン
 nodeはv16.13.0

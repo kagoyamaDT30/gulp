@@ -85,6 +85,7 @@ const compressJs = (done) => {
     done();
 }
 
+// css圧縮
 const compressCss = (done) => {
     gulp.src('./assets/css/style.css')
     .pipe(cleanCss())
@@ -116,5 +117,9 @@ const watch = (done) =>  {
 exports.watch = watch;
 
 exports.default = gulp.series(
-    sync, reload, watch
+    sync, watch
+);
+
+exports.prod = gulp.series(
+    image, compressCss, compressJs
 );
