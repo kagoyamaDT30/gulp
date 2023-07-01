@@ -16,9 +16,11 @@ const imagemin = require('gulp-imagemin');
 const mozjpeg = require('imagemin-mozjpeg');
 const pngquant = require('imagemin-pngquant');
 
-// js圧縮 プラグイン
+// ファイル名変更プラグイン（ex.css → min.css）
 const rename = require('gulp-rename');
+// js圧縮 プラグイン
 const uglify = require('gulp-uglify');
+// css圧縮プラグイン
 const cleanCss = require('gulp-clean-css');
 
 // gulp-sassの設定
@@ -117,7 +119,7 @@ const watch = (done) =>  {
 exports.watch = watch;
 
 exports.default = gulp.series(
-    sync, watch
+    sass, sync, watch, compressCss, compressJs, image
 );
 
 exports.prod = gulp.series(
